@@ -1,0 +1,70 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+
+player_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper and 2 for Scissors: '))
+opponent_choice = random.randint(0,2)
+
+
+if player_choice == 0:
+	print(f'You chose Rock \n {rock}')
+elif player_choice == 1:
+	print(f'You chose Paper \n {paper}')
+else:
+	print(f'You chose Scissors \n {scissors}')
+
+if opponent_choice == 0:
+	print(f'Your opponents choice is Rock \n {rock}')
+elif opponent_choice == 1:
+	print(f'Your opponents choice is Paper \n {paper}')
+else:
+	print(f'Your opponents choice is Scissors \n {scissors}')
+
+
+if player_choice == 0:
+	if opponent_choice == 0:
+		print('It\'s a draw')
+	elif opponent_choice == 1:
+		print('You loose')
+	else:
+		print('You win')
+elif player_choice == 1:
+	if opponent_choice == 0:
+		print('You win')
+	elif opponent_choice == 1:
+		print('It\'s a draw')
+	else:
+	 	print('You loose')
+else: 
+	if opponent_choice == 0:
+		print('You loose')
+	elif opponent_choice == 2:
+		print('It\'s a draw')
+	else:
+		print('You Win!')
+	 
